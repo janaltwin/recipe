@@ -1,0 +1,236 @@
+.random-recipe {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 5rem;
+}
+
+.random-recipe__header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.random-recipe__eyebrow {
+  margin: 0 0 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.random-recipe__title {
+  margin: 0 0 1rem;
+  font-size: clamp(1.25rem, 5vw, 1.85rem);
+  letter-spacing: -0.02em;
+}
+
+.random-recipe__subtitle {
+  margin: 0 auto;
+  max-width: 36rem;
+  font-size: 1.0625rem;
+  color: var(--color-text-muted);
+}
+
+.random-recipe__card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 48px var(--color-shadow);
+  overflow: hidden;
+}
+
+.random-recipe__content {
+  display: grid;
+  gap: 0;
+}
+
+.random-recipe__image-wrap {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--color-bg-alt);
+}
+
+.random-recipe__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.random-recipe__details {
+  padding: 2rem 1.5rem;
+}
+
+.random-recipe__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.random-recipe__tag {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-full);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+}
+
+.random-recipe__tag--muted {
+  background: var(--color-sage-soft);
+  color: var(--color-sage);
+}
+
+.random-recipe__name {
+  margin: 0 0 0.5rem;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  letter-spacing: -0.02em;
+}
+
+.random-recipe__ingredient-count {
+  margin: 0 0 1.5rem;
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+.random-recipe__instructions {
+  margin-bottom: 0;
+}
+
+.random-recipe__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.btn--youtube {
+  background: #ff0000;
+  color: #fff;
+}
+
+.btn--youtube:hover {
+  background: #cc0000;
+}
+
+.random-recipe__ingredients {
+  margin-bottom: 1.75rem;
+}
+
+.random-recipe__ingredients h3,
+.random-recipe__instructions h3 {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+}
+
+.random-recipe__ingredients ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.random-recipe__ingredients li {
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+}
+
+.random-recipe__measure {
+  display: inline-block;
+  min-width: 4.5rem;
+  margin-right: 0.5rem;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.random-recipe__instructions p {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+  white-space: pre-line;
+  max-height: 12rem;
+  overflow-y: auto;
+}
+
+.random-recipe__loading {
+  display: grid;
+  gap: 0;
+}
+
+.random-recipe__skeleton-body {
+  padding: 2rem 1.5rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.random-recipe__skeleton {
+  border-radius: var(--radius-sm);
+  background: linear-gradient(
+    90deg,
+    var(--color-bg-alt) 25%,
+    #e8dfd4 50%,
+    var(--color-bg-alt) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.4s infinite;
+}
+
+.random-recipe__skeleton--image {
+  aspect-ratio: 16 / 9;
+}
+
+.random-recipe__skeleton--line {
+  height: 1rem;
+}
+
+.random-recipe__skeleton--short {
+  width: 60%;
+}
+
+.random-recipe__error {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.random-recipe__error p {
+  margin: 0 0 1.25rem;
+  color: var(--color-text-muted);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .random-recipe__content {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .random-recipe__image-wrap {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+
+  .random-recipe__details {
+    padding: 2.5rem;
+    max-height: 640px;
+    overflow-y: auto;
+  }
+
+  .random-recipe__instructions p {
+    max-height: none;
+  }
+}
